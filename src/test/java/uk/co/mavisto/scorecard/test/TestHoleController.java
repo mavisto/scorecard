@@ -31,7 +31,6 @@ public class TestHoleController {
 
 	@Test
 	public void test() {
-		fail("Not yet implemented");
 	}
 
 }
