@@ -11,18 +11,16 @@ import javax.persistence.Table;
  * This is our model class and it corresponds to Player table in database
  */
 @Entity
-@Table(name = "PLAYER")
-public class Player {
+@Table(name = "ROUND")
+public class Round {
 
 	@Id
 	@Column(name = "id")
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	int id;
 	
-	@Column(name="playername")
-	String playerName;
-	
-	@Column(name="playerhcap")
-	float playerHcap;
+	//Player ID
+	//Course ID
+	//Date (Timestamp
 
 }
