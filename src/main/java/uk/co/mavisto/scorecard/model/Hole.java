@@ -26,16 +26,23 @@ public class Hole {
 	private Course course;
 
 	@Column(name = "number")
-	long number;
+	int holeNumber;
 
 	@Column(name = "length")
-	long length;
+	int holeLength;
 
 	@Column(name = "par")
-	long par;
+	int holePar;
 
-	public Hole(int i) {
-		this.number = i;
+	enum TeeColour {
+		RED, YELLOW, WHITE
+	}
+
+	@Column(name = "teeColour")
+	TeeColour teeColour;
+
+	public Hole(int course_id, int i) {
+		this.holeNumber = i;
 	}
 
 	public int getId() {
@@ -46,28 +53,28 @@ public class Hole {
 		this.id = id;
 	}
 
-	public long getNumber() {
-		return number;
+	public int getNumber() {
+		return holeNumber;
 	}
 
-	public void setNumber(long number) {
-		this.number = number;
+	public void setNumber(int number) {
+		this.holeNumber = number;
 	}
 
-	public long getLength() {
-		return length;
+	public int getLength() {
+		return holeLength;
 	}
 
-	public void setLength(long length) {
-		this.length = length;
+	public void setLength(int length) {
+		this.holeLength = length;
 	}
 
-	public long getPar() {
-		return par;
+	public int getPar() {
+		return holePar;
 	}
 
-	public void setPar(long par) {
-		this.par = par;
+	public void setPar(int par) {
+		this.holePar = par;
 	}
 
 }

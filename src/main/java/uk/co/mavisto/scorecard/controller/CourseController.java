@@ -11,10 +11,11 @@ import uk.co.mavisto.scorecard.model.Hole;
 public class CourseController {
 	
 	Map<Integer, Hole> courseHoleMap = new TreeMap<Integer, Hole>();
+	int courseId;
 	
 	public CourseController() {
 		for(int i = 1; i <= 18; i++) {
-			courseHoleMap.put(i, new Hole(i));
+			courseHoleMap.put(i, new Hole(courseId, i));
 		}
 	}
 
@@ -24,6 +25,11 @@ public class CourseController {
 
 	public void setCourseHoleMap(Map<Integer, Hole> courseHoleMap) {
 		this.courseHoleMap = courseHoleMap;
+	}
+	
+	public Hole getHoleDetailsbyNumber(long number) {
+		Hole holeDetails = courseHoleMap.get(number);
+		return holeDetails;
 	}
 
 }
