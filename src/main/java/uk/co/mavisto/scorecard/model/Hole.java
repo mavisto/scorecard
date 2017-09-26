@@ -15,6 +15,7 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "HOLE")
 public class Hole {
+
 	@Id
 	@Column(name = "id")
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -32,6 +33,10 @@ public class Hole {
 
 	@Column(name = "par")
 	long par;
+
+	public Hole(int i) {
+		this.number = i;
+	}
 
 	public int getId() {
 		return id;

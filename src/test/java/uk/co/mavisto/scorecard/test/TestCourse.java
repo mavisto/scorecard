@@ -5,6 +5,7 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 
 import junit.framework.TestCase;
+import uk.co.mavisto.scorecard.controller.CourseController;
 
 public class TestCourse extends TestCase {
 	/**
@@ -22,7 +23,12 @@ public class TestCourse extends TestCase {
 	}
 	
 	@Test
-	public void test() {
+	public void testCourseControllerObjectCreated() {
+		CourseController testCourseController = new CourseController();
+		
+		for(int i = 1; i <= testCourseController.getCourseHoleMap().size(); i++) {
+			System.out.println("The course object is " + testCourseController.getCourseHoleMap().get(i).getNumber());
+		}
 	}
 
 }
