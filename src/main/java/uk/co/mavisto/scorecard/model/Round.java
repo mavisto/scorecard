@@ -21,6 +21,6 @@ public class Round {
 	
 	//Player ID
 	//Course ID
-	//Date (Timestamp
+	//Date (Timestamp)
 
 }
